@@ -8,6 +8,7 @@ RUN apk --update add --virtual build_deps \
   && gem install --verbose --no-document \
     json:${JSON_GEM_VERSION} \
     github-pages:${GITHUB_GEM_VERSION} \
+    minitest \
   && apk del build_deps \
   && apk add git \
   && mkdir -p /usr/src/app \
